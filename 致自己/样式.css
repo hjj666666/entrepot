@@ -1,0 +1,67 @@
+/* 使用元素选择器是整个框架居中 */
+*{
+    text-align: center;
+    font-family: "仿宋体"，Arial, Helvetica, sans-serif;
+}
+/* 使用元素选择器加上属性选择器 */
+a[href="https://www.bilibili.com/video/BV1yv411N7Wi?spm_id_from=333.999.0.0"]{
+    font-size: 40px;
+    text-decoration:none;
+    color: rgb(193 210 240);
+    font-weight: 300;
+    font-style: italic;
+}
+
+/*为a元素加上honver特性*/
+a:hover{
+    color: darkred;
+    text-decoration: line-through;
+    /* color: RBG(220,20,60); */
+}
+
+/* 使用类选择器讲文章左对齐 */
+.section1{
+    text-align: left;
+}
+
+/* 使用后代选择器改变section中所有文本的样式 */
+.section1 p{
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 文章总标题的样式 */
+footer p,.biaoti{
+    font-size: 4em;
+    font-family: "仿宋",Arial, Helvetica, sans-serif;
+    font-style: italic;
+    color: #008C8C;
+    font-weight: 900;
+    text-shadow: 20px 20px 5px RGB(129,216,209);
+    text-align: center;
+}
+
+/* 改变盒子section的大小 */
+section{
+    margin-top: 20px;
+    margin-right: 400px;
+    margin-left: 400px;
+}
+
+/* 改变ul中的li的列表的样式 */
+ul li{
+    font-family: "仿宋";
+}
+
+/* 改变ul中a的样式 */
+ul a{
+    color: #000;
+    text-decoration: none;
+}
+
+/* 使用并列，改变span中的样式 ，以及*/
+#p1,#p2,#p3,p span{
+    font-family: "宋体";
+    font-size: 15px;
+    line-height: 2;
+}
