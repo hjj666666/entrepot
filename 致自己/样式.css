@@ -1,3 +1,4 @@
+/* 2021.9.15 用所学写了个静态网页 */
 /* 使用元素选择器是整个框架居中 */
 *{
     text-align: center;
@@ -21,14 +22,13 @@ a:hover{
 
 /* 使用类选择器讲文章左对齐 */
 .section1{
+    width: 700px;
     text-align: left;
+    border-style: ridge;
+    border-color: cyan;
+    border-width: 4px;
 }
 
-/* 使用后代选择器改变section中所有文本的样式 */
-.section1 p{
-    font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
-}
 
 /* 文章总标题的样式 */
 footer p,.biaoti{
@@ -39,13 +39,6 @@ footer p,.biaoti{
     font-weight: 900;
     text-shadow: 20px 20px 5px RGB(129,216,209);
     text-align: center;
-}
-
-/* 改变盒子section的大小 */
-section{
-    margin-top: 20px;
-    margin-right: 400px;
-    margin-left: 400px;
 }
 
 /* 改变ul中的li的列表的样式 */
@@ -64,4 +57,45 @@ ul a{
     font-family: "宋体";
     font-size: 15px;
     line-height: 2;
+}
+
+/* 2021.9.21 学习了盒模型的相关知识打算为这个页面的和模型具体化 */
+/* 改变盒子section的大小,并加上背景 */
+section{
+    margin-top: 20px;
+    margin-right: 400px;
+    margin-left: 400px;
+    background: seashell;
+}
+
+/* 改变div1 中img的大小 */
+.div1 img{
+    width: 700px;
+    border: ridge;
+    border-width: 4px;
+    margin-top: auto
+}
+
+/* 改变div1与其它盒子的距离 */
+.div{
+    width: 700px;
+    border: ridge;
+    border-width: 4px;
+    margin-top: auto;
+}
+
+/* 为p1 p2 加上下边框同时合理化盒子间的距离 */
+ #p1{
+    border-bottom: double;
+    border-bottom-color: #008c8c;
+    height: 250px;
+}
+
+#p2{
+    border-bottom: double;
+    border-bottom-color: #008c8c;
+    height: 250px;
+}
+#p3{
+    height: 250px;
 }
