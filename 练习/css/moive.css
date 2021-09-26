@@ -1,0 +1,206 @@
+/* 对整个网页进行一些初始化设置 */
+.main{
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: #fff;
+}
+
+/* 对导航栏的样式进行设置 */
+.main .ul1{
+    background-color: #47464a;
+    height:60px;
+    width:100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* 将导航栏内的li元素设置为行块盒，使其横向排列 */
+/* 设置每个块盒的宽度与高度 */
+.main .ul1 li{
+    display: inline-block;
+    width: 144px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+}
+
+/* 增加鼠标悬停效果 */
+.main .ul1 li a:hover{
+    color:#fff;
+}
+
+/* 将选中的状态设置为红色 */
+.main .select{
+    color:red;
+}
+
+/* 为下面的分类总框架加上边框，并设置其宽高 */
+.div1{
+    border: 1px solid #e5e5e5;
+    width: 75%;
+    padding: 0px 10px;
+    margin: 0px auto;
+    line-height: 30px;
+}
+
+/* 为div1下的ul设置下边框线*/
+.div1 .div2{
+    border-bottom: 1px solid #e5e5e5;;
+}
+
+/* 设置分类标签的大小 */
+.div1 .div2 .div3{
+   color: #999;
+}
+
+/* 将每个ul里的li则指为浮动，自从左向右边排列*/
+/* 将div3设置为左浮动，ul设置为右浮动 */
+.div1>.div2>.div3{
+    float: left;
+} 
+.div1 .div2 ul{
+    width: 1050px;
+    float:left;
+}
+/* 设置每个li的大小 */
+.div1 .div2 ul li{
+   margin:0px 20px;
+   float: left;
+}
+
+/* 解决盒子的高度塌陷问题 */
+.clearfix{
+    clear:both;
+}
+
+/* 为div2里面的li设置浮动效果 */
+.div1 .div2 ul li:hover{
+    color: orangered;
+}
+
+/* 为div2里面的li设置选定效果 */
+.div1 .div2 ul li .select{
+     background-color: red;
+     color: white;
+     border-radius: 20px;
+}
+
+/* 设置div4的上边距 */
+.div4{
+    margin: 40px 0px;
+   padding:30px;
+}
+
+/* 将所有的itemm设置为浮动 */
+/* 并将所有item的margin-right设为30 */
+.div4 .item{
+    float:left;
+    margin-right:23px;
+    margin-bottom: 20px;
+}
+
+/* 使用伪类选择器将每6个图片的右边距去掉 */
+.div4 .item:nth-child(6n){
+    margin-right: 0px;
+}
+
+/* 将图片的大小固定，避免传过来的图片不规范*/
+.div4 .item .picture{
+ width: 160;
+ height: 220;
+}
+
+/* 设置评分样式 */
+.div4 .item .score{
+    font-size: 24px;
+    font-style: italic;
+    color: #ffb400;
+    text-align: center;
+}
+
+/* 设置名称的样式 */
+.div4 .item .name{
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+    margin-top: 10px;
+    width:160px;
+}
+
+/* 并且将太长的名字使用省略号代替 */
+.div4 .item .name{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 将div5 中的ul居中 */
+.main .div5 ul{
+    text-align: center;
+    width: 1139px;
+    margin: 0px auto;
+}
+
+.main .div5{
+    margin: 20px 0px;
+    
+}
+/* 为div5 中的ul的li设置边框 */
+.main .div5 ul li{
+    display: inline-block;
+    font-size: 20px;
+    border: 1px solid #d8d8d8;
+    margin-right: 20px;
+    line-height: 30px;
+    font-size: 20px;
+}
+.main .div5 ul .num{
+     width: 35px;
+}
+
+/* 先测试一下加上这个常规流元素会不会对其他地方造成影响 */
+/* .main .div6{
+    background:red;
+} */
+
+/* 为div6加上下边框*/
+.div1 .div6{
+    border-bottom: 1px solid #e5e5e5;    
+}
+
+/* 将ul其居中 */
+.div1 .div6 ul{
+    width: 80%;
+    margin: 0px auto;
+}
+
+/* 确定没有问题后将该ul里面的li设置为浮动，为每个li设置边框 */
+/* 将li设置为定位脱离标准文档流，避免加入div后将div6撑开 */
+.div1 .div6 ul li{
+    float: left;
+    text-align: center;
+    margin-right: 200px;
+    width: 100px;
+    position: relative;
+    box-sizing: border-box;
+    height: 27px;
+}
+
+.div1 .div6 ul li:hover{
+    /* border:  1px solid #e5e5e549;  */
+    border:  1px solid black; 
+    background: cyan;
+
+}
+/* 同样使div脱离文档流并将其设置为绝对定位 */
+.div1 .div6 ul .li2 div{
+    width: 300px;
+    position: absolute;
+    top: 26px;
+    right: 0px;
+    border:  1px solid black; 
+    display: none;
+}
+
+.div1 .div6 ul .li2:hover div{
+    display: block;
+}
