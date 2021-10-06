@@ -1,0 +1,68 @@
+/* 设置好页面的统一样式 */
+body{
+      font-size: 12px;
+      font-family: "微软雅黑";
+}
+
+/* 设置总边框的大小，并设置好背景图 */
+.bg{
+      width: 1431px;
+      height: 717px;
+      background-image: url(../form_bg.jpg);
+      position: relative;
+}
+
+/* 调整好表格区域的范围 */
+.bg .form_area{
+      position: absolute;
+      left: 50%;
+      top:150px;
+      width: 600px;
+}
+
+/* 调整好标题的样式 */
+.bg .form_area h1{
+    height: 24px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* 设置下面所有span的统一大小 */
+.bg .form_area span{
+      display: inline-block;
+      width: 85px;
+      height: 16px;
+      text-align: right;
+}
+
+/* 设置下面所有input的统一大小 */
+.bg .form_area .div1{
+      margin-top: 20px;
+}
+/* 设置下面所有input的统一大小 */
+.bg .form_area input{
+      height: 24px;
+      width: 206px;
+}
+
+/* 额外设置单选框的形势 */
+body .bg .form_area .div1 .ra{
+      width: 30px;
+}
+
+
+body .bg .form_area .checkbox{
+      width: 30px;
+}
+
+body .bg .form_area .but{
+      padding: 30px;
+display: inline-block;
+
+margin-right: 10px;
+}
+
+body .bg .form_area .but input{
+      width: 100px;
+}
