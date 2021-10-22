@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动态轮播图</title>
+    <link rel="stylesheet" href="../css.css/reset.css">
+    <link rel="stylesheet" href="../css.css/style.css">
+    <script>
+        // 页面的样式大概已经设置好了，如何实现前后移动的功能
+        // 我的思路是将：第一个li不断删除插入从而达到改变顺序的目的
+        window.onload=function(){
+        // 首先尝试一下能否为两个div捆绑事件
+        // 获取div对象
+        // 两个按钮的功能已经实现看看能否实现自动轮播的功能
+        // 看了看别的人的视屏直接设置一个函数，然后定时轮播即可
+        let timmer=setInterval(zd,3000);
+
+        function zd(){
+        let fristli=document.querySelectorAll(".container .lb li")[0];
+        // 获取所有li的父节点，方便进行删除插入操作
+        let father=document.querySelector(".container .lb");
+        // 将第一个li删除
+        let temp =father.removeChild(fristli);
+        // 再将temp插入到li列表的最后
+        father.appendChild(temp);
+        }
+
+   
+
+        // 先设置往下按的按钮
+        let next=document.querySelector(".container .next a");
+        next.onclick=function(){
+           // alert("后一页");测试完毕有效
+                //获取第一个li
+        let fristli=document.querySelectorAll(".container .lb li")[0];
+        // 获取所有li的父节点，方便进行删除插入操作
+        let father=document.querySelector(".container .lb");
+        // 将第一个li删除
+        let temp =father.removeChild(fristli);
+        // 再将temp插入到li列表的最后
+        father.appendChild(temp);
+        }
+
+
+        // 同样往前移的思路与上面的相反是删除最后一个然后将
+         // 先设置往前按的按钮
+        let pre=document.querySelector(".container .pre a");
+        pre.onclick=function(){
+           // alert("前一页");测试完毕有效
+                //获取最后一个li
+        let lastli=document.querySelectorAll(".container .lb li")[4];
+        // 获取所有li的父节点，方便进行删除插入操作
+        let father=document.querySelector(".container .lb");
+        // 将最后一个li删除
+        let temp =father.removeChild(lastli);
+        // 再将temp插入到li列表的最前面
+        father.insertBefore(temp,father.firstChild);
+        }
+
+        }
+
+    </script>
+</head>
+<body>
+    <!-- 最近学了js的dom相关知识，打算做一个动态轮播图巩固一下所学的知识 -->
+    <!-- 我的思路就是：先使用html和css做出相应的静态界面然后再使用js实现动态功能 -->
+    <div class="container">
+        <!-- 轮播图的主要部分 -->
+        <ul class="lb">
+            <li><img src="./1.jpeg" alt="图片"></li>
+            <li><img src="./2.jpeg" alt="图片"></li>
+            <li><img src="./3.jpeg" alt="图片"></li>
+            <li><img src="./4.jpeg" alt="图片"></li>
+            <li><img src="./5.jpeg" alt="图片"></li>
+        </ul>
+        <!-- 加上向左移的按钮 -->
+        <div class="pre">
+            <a href="#">
+                <img src="../img/大图左切换箭头.png" alt="图片">
+            </a>
+         </div>
+         <!-- 加上向右移的按钮 -->
+        <div class="next">
+            <a href="#">
+                <img src="../img/大图右切换箭头.png" alt="">
+            </a>
+        </div>
+    </div>
+    
+</body>
+</html>

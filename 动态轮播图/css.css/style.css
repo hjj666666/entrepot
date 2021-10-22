@@ -1,0 +1,70 @@
+/* 将整个页面设置为粉色 */
+body{
+    background-color: pink;
+}
+/* 首先设置container在页面中居中 */
+.container{
+    width: 800px;
+    margin: 200px auto;
+    position: relative;
+}
+
+/* 设置所有图片的大小 */
+.container .lb li img{
+    width: 400px;
+    height: 200px;
+    /* 设置圆角 */
+    border-style: solid;
+    border-width: 3px;
+    border-color: purple;
+    border-radius: 15px;
+}
+
+.container .lb li{
+    /* 将所有的图片绝对定位 */
+    position: absolute;
+}
+
+/* 调整好各个图片的位置 */
+.container .lb li:nth-child(0){
+    left: 0px;
+}
+.container .lb li:nth-child(1){
+    top: -50px;
+    left: 150px;
+    z-index: 100;
+}
+/* 重新调整好中间这一张图片的大小 */
+.container .lb li:nth-child(1) img{
+    width: 500px;
+    height: 300px;
+}
+.container .lb li:nth-child(2){
+    left: 400px;
+}
+
+/* 调整好两个按钮的样式 */
+.container .pre{
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    top: 50px;
+    left: -25px;
+}
+.container .next{
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    top: 50px;
+    right: -25px;
+}
+
+/* 设置箭头的大小 */
+.container .pre a img{
+    width: 50px;
+    height: 100px;
+}
+.container .next a img{
+    width: 50px;
+    height: 100px;
+}
