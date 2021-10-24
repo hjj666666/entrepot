@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>菜刀</title>
+    <link rel="stylesheet" href="./样式/css.css">
+    <script>
+        window.onload=function(){  
+        // 获取cd对象
+        let cd=document.querySelector(".cd");
+        // 设置cd按下时的事件
+        cd.onmousedown=function(event){
+            // 完善鼠标的点击位置，使我们的鼠标点击图片哪，鼠标就停留在哪
+            // 实际上就是解决top 和 left的问题
+            let ol=event.clientX-cd.offsetLeft;
+            let ot=event.clientY-cd.offsetTop;
+         //  为document.onmouseover上绑定事件
+        document.onmousemove=function(event){
+         // 获取鼠标的坐标
+            let left=event.clientX;
+            let top=event.clientY;
+        //  将菜刀的横坐标设置为left,纵坐标设置为top从而实现图片移动的效果
+        cd.style.left=left-ol+"px";
+        cd.style.top=top-ot+"px";
+        } 
+        }
+        // 为什么要将释放事件绑定给document,因为如果绑定给cd，cd被其他元素挡住时,事件会失效
+        document.onmouseup=function(){
+            document.onmousemove="null";
+         }
+        }
+    </script>
+</head>
+<body>
+    <div class="cd">
+           
+     </div>
+</body>
+</html>
